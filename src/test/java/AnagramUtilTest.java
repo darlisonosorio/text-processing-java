@@ -30,13 +30,19 @@ public class AnagramUtilTest {
                 InvalidAnagramException.class,
                 () -> AnagramUtil.generateAnagrams("")
         );
-        Assertions.assertEquals("O Texto não pode ser vazio", ex1.getMessage());
+        Assertions.assertEquals("Text cannot be null or empty", ex1.getMessage());
 
         final InvalidAnagramException ex2 = Assertions.assertThrows(
+                InvalidAnagramException.class,
+                () -> AnagramUtil.generateAnagrams(null)
+        );
+        Assertions.assertEquals("Text cannot be null or empty", ex2.getMessage());
+
+        final InvalidAnagramException ex3 = Assertions.assertThrows(
             InvalidAnagramException.class,
             () -> AnagramUtil.generateAnagrams("abc123")
         );
-        Assertions.assertEquals("O Texto deve conter apenas letras", ex2.getMessage());
+        Assertions.assertEquals("Text must contain only letters", ex3.getMessage());
     }
 
 }

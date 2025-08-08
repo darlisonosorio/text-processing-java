@@ -14,12 +14,12 @@ public class TextAnagramMain {
 
 
                         final String response = anagrams.size() == 1
-                                ? " 1 anagrama encontrado para '" + val + "':  [ " + anagrams.getFirst() + " ]"
-                                : anagrams.size() + " anagramas encontrados para '" + val + "': " + anagrams;
+                                ? " 1 anagram found for '" + val + "':  [ " + anagrams.getFirst() + " ]"
+                                : anagrams.size() + " anagrams found for '" + val + "': " + anagrams;
 
                         System.out.println(response);
                     } catch (InvalidAnagramException e) {
-                        System.out.println("Erro ao obter anagramas para '" + val + "': " + e.getMessage());
+                        System.out.println("Error while obtaining anagrams for '" + val + "': " + e.getMessage());
                     }
                 });
 

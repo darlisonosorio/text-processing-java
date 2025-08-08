@@ -69,10 +69,10 @@ public class AnagramUtil {
      */
     private static void validateText(final String text) throws InvalidAnagramException {
         if (text == null || text.trim().isEmpty()) {
-            throw new InvalidAnagramException("O Texto não pode ser vazio");
+            throw new InvalidAnagramException("Text cannot be null or empty");
         }
         if (!text.trim().matches("[a-zA-Z]+")) {
-            throw new InvalidAnagramException("O Texto deve conter apenas letras");
+            throw new InvalidAnagramException("Text must contain only letters");
         }
     }
 
